@@ -1,8 +1,8 @@
-resource "azurerm_kubernetes_cluster" "example" {
-  name                = "example-aks1"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
-  dns_prefix          = "exampleaks1"
+resource "azurerm_kubernetes_cluster" "akscluster" {
+  name                = var.name
+  location            = var.location
+  resource_group_name = var.resource_group
+  dns_prefix          = var.dns_prefix
 
   default_node_pool {
     name       = "default"
@@ -12,10 +12,6 @@ resource "azurerm_kubernetes_cluster" "example" {
 
   identity {
     type = "SystemAssigned"
-  }
-
-  tags = {
-    Environment = "Production"
   }
 }
 
