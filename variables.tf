@@ -13,3 +13,8 @@ variable "resource_group" {
 variable "dns_prefix" {
     description = "DNS prefix specified when creating the managed cluster."
 }
+
+variable "tags" {
+    description = "Tags to associate to apply to the resources."
+    default = {}
+}

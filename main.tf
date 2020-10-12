@@ -13,5 +13,7 @@ resource "azurerm_kubernetes_cluster" "akscluster" {
   identity {
     type = "SystemAssigned"
   }
+
+  tags = var.tags
 }
 
