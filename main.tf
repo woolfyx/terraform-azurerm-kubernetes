@@ -12,11 +12,11 @@ resource "azurerm_kubernetes_cluster" "akscluster" {
   role_based_access_control {
     enabled = true
     azure_active_directory {
-      managed = true
+      managed   = true
       tenant_id = var.aad_tenant_id
     }
   }
-  
+
   identity {
     type = "SystemAssigned"
   }
