@@ -3,7 +3,7 @@ variable "name" {
 }
 
 variable "aad_tenant_id" {
-  description = "Tenant ID for RBAC with AAD."
+  description = "Azure Active Directory tenant ID for RBAC."
 }
 
 variable "location" {
