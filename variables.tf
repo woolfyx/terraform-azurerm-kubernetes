@@ -3,7 +3,7 @@ variable "name" {
 }
 
 variable "aad_tenant_id" {
-    description = "Tenant ID for AAD managed AKS cluster."
+    description = "Tenant ID for RBAC with AAD."
 }
 
 variable "location" {

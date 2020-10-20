@@ -9,12 +9,14 @@ resource "azurerm_kubernetes_cluster" "akscluster" {
     node_count = 1
     vm_size    = "Standard_D2_v2"
   }
-
-  azure_active_directory {
-    managed = true
-    tenant_id = var.aad_tenant_id
+  role_based_access_control {
+    enabled = true
+    azure_active_directory {
+      managed = true
+      tenant_id = var.aad_tenant_id
+    }
   }
-
+  
   identity {
     type = "SystemAssigned"
   }
