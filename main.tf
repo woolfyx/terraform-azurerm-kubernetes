@@ -10,6 +10,11 @@ resource "azurerm_kubernetes_cluster" "akscluster" {
     vm_size    = "Standard_D2_v2"
   }
 
+  azure_active_directory {
+    managed = true
+    tenant_id = var.aad_tenant_id
+  }
+
   identity {
     type = "SystemAssigned"
   }

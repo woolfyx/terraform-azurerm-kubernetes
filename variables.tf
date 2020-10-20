@@ -2,6 +2,10 @@ variable "name" {
     description = "AKS cluster name."
 }
 
+variable "aad_tenant_id" {
+    description = "Tenant ID for AAD managed AKS cluster."
+}
+
 variable "location" {
     description = "Resources location."
 }
@@ -15,6 +19,6 @@ variable "dns_prefix" {
 }
 
 variable "tags" {
-    description = "Tags to associate to apply to the resources."
+    description = "Tags to apply to the resources."
     default = {}
 }
