@@ -7,7 +7,7 @@ variable "aad_tenant_id" {
 }
 
 variable "location" {
-  description = "Resources location."
+  description = "Azure region to locate resources."
 }
 
 variable "resource_group" {
